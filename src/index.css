@@ -1,0 +1,31 @@
+@import 'leaflet/dist/leaflet.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .slider {
+    @apply accent-blue-600;
+  }
+
+  .slider::-webkit-slider-thumb {
+    @apply appearance-none w-4 h-4 bg-blue-600 rounded-full cursor-pointer;
+    @apply hover:bg-blue-700 transition-colors;
+  }
+
+  .slider::-moz-range-thumb {
+    @apply w-4 h-4 bg-blue-600 rounded-full cursor-pointer border-0;
+    @apply hover:bg-blue-700 transition-colors;
+  }
+
+  #impact-map {
+    @apply relative z-0;
+  }
+}
